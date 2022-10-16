@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_01_Check_Environment {
+public class Topic_00_Check_Template {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 
@@ -24,12 +24,10 @@ public class Topic_01_Check_Environment {
 
 	@Test
 	public void TC_01_() {
-
 	}
 
 	@Test
 	public void TC_02_() {
-
 	}
 
 	@Test
