@@ -106,9 +106,9 @@ public class Topic_00_Check_Locator_Exercise01 {
 		driver.findElement(By.xpath("//input[@id='txtCEmail']")).sendKeys("tuthitramy02@gmail.com");
 		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("myqui07");
 		driver.findElement(By.xpath("//input[@id='txtCPassword']")).sendKeys("myqui07");
-		driver.findElement(By.xpath("//input[@id='txtPhone']")).sendKeys("1243");
-		driver.findElement(By.xpath("//div[@class='field_btn']/button[text()='ĐĂNG KÝ']")).click();
-		Assert.assertEquals(driver.findElement(By.xpath("//label[@id='txtPhone-error']")).getText(),"Số điện thoại bắt đầu bằng: 09 - 03 - 012 - 016 - 018 - 019 - 088 - 03 - 05 - 07 - 08");
+		//driver.findElement(By.xpath("//input[@id='txtPhone']")).sendKeys("1243");
+		//driver.findElement(By.xpath("//div[@class='field_btn']/button[text()='ĐĂNG KÝ']")).click();
+		//Assert.assertEquals(driver.findElement(By.xpath("//label[@id='txtPhone-error']")).getText(),"Số điện thoại bắt đầu bằng: 09 - 03 - 012 - 016 - 018 - 019 - 088 - 03 - 05 - 07 - 08");
 		
 		driver.findElement(By.xpath("//input[@id='txtPhone']")).sendKeys("094362");
 		driver.findElement(By.xpath("//div[@class='field_btn']/button[text()='ĐĂNG KÝ']")).click();
