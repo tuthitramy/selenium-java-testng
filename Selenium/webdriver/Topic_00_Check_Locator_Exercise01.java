@@ -92,7 +92,7 @@ public class Topic_00_Check_Locator_Exercise01 {
 		driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("myqui07");
 		driver.findElement(By.xpath("//input[@id='txtCPassword']")).sendKeys("myqui073");
 		driver.findElement(By.xpath("//input[@id='txtPhone']")).sendKeys("0934575102");
-		driver.findElement(By.xpath("//div[@class='field_btn']/button[text()='ĐĂNG KÝ']")).click();
+		//driver.findElement(By.xpath("//div[@class='field_btn']/button[text()='ĐĂNG KÝ']")).click();
 		Assert.assertEquals(driver.findElement(By.xpath("//label[@id='txtCPassword-error']")).getText(),"Mật khẩu bạn nhập không khớp");
 		
 		
