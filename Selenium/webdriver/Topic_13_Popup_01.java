@@ -46,7 +46,6 @@ public class Topic_13_Popup_01 {
 	}
 
 	public String getEmailRandom() {
-		Random rand = new Random();
 		return "test" + rand.nextInt(99) + "@gmail.com";
 
 	}
@@ -92,6 +91,7 @@ public class Topic_13_Popup_01 {
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='password-form-login-message']")).getText(),
 				"Sai tên đăng nhập hoặc mật khẩu");
 		driver.findElement(By.xpath("//button[ @class='k-popup-account-close close']")).click();
+		sleepInSecond(5);
 		Assert.assertFalse(driver.findElement(By.xpath("//div[@id='k-popup-account-login']")).isDisplayed());
 
 	}
@@ -132,7 +132,7 @@ public class Topic_13_Popup_01 {
 	@Test
 	public void TC_05_Java_Code_Geeks() {
 		driver.get("https://www.javacodegeeks.com/");
-		sleepInSecond(5);
+		sleepInSecond(10);
 		List<WebElement> popupGetTheBooks = driver.findElements(By.xpath("//div[@class='lepopup-popup-container']"));
 		List<WebElement> popupOK = driver
 				.findElements(By.xpath("//div[@class='lepopup-form-inner' and @style='width:526px;height:576px;']"));
@@ -144,6 +144,7 @@ public class Topic_13_Popup_01 {
 				if (popupOK.size() == 1) {
 					driver.findElement(By.xpath("//input[@autocomplete='email']")).sendKeys(getEmailRandom());
 					driver.findElement(By.xpath("//a[@data-label='OK']")).click();
+					sleepInSecond(10);
 					searchAction();
 				} else {
 					searchAction();
@@ -152,6 +153,7 @@ public class Topic_13_Popup_01 {
 			} else {
 				driver.findElement(By.xpath("//input[@autocomplete='email']")).sendKeys(getEmailRandom());
 				driver.findElement(By.xpath("//a[@data-label='OK']")).click();
+				sleepInSecond(10);
 				searchAction();
 
 			}
@@ -193,6 +195,6 @@ public class Topic_13_Popup_01 {
 
 	@AfterClass
 	public void afterClass() {
-		 driver.quit();
+		driver.quit();
 	}
 }
