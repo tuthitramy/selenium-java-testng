@@ -6,12 +6,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -62,7 +60,7 @@ public class Topic_13_Popup_01 {
 	}
 
 	@Test
-	public void TC_01_ngoaingu24h() {
+	public void TC_01_English24H() {
 		driver.get("https://ngoaingu24h.vn/");
 		By loginPopup = By.xpath("//div[@id='modal-login-v1'][1]");
 		Assert.assertFalse(driver.findElement(loginPopup).isDisplayed());
@@ -80,7 +78,7 @@ public class Topic_13_Popup_01 {
 
 	@Test
 
-	public void TC_02_kynaenglish() {
+	public void TC_02_EnglishSkill() {
 		driver.get("https://skills.kynaenglish.vn/");
 		sleepInSecond(3);
 		Assert.assertFalse(driver.findElement(By.xpath("//div[@id='k-popup-account-login']")).isDisplayed());
@@ -95,11 +93,11 @@ public class Topic_13_Popup_01 {
 				"Sai tên đăng nhập hoặc mật khẩu");
 		driver.findElement(By.xpath("//button[ @class='k-popup-account-close close']")).click();
 		Assert.assertFalse(driver.findElement(By.xpath("//div[@id='k-popup-account-login']")).isDisplayed());
-//
+
 	}
 
 	@Test
-	public void TC_03_tiki() {
+	public void TC_03_Tiki() {
 		driver.get("https://tiki.vn/");
 		Assert.assertEquals(driver.findElements(By.xpath("//div[@role='dialog']")).size(), 0);
 		driver.findElement(By.xpath("//span[text()='Đăng Nhập / Đăng Ký']")).click();
@@ -119,7 +117,7 @@ public class Topic_13_Popup_01 {
 	}
 
 	@Test
-	public void TC_04_facebook() {
+	public void TC_04_Facebook() {
 		driver.get("https://www.facebook.com/");
 		driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
 		Assert.assertTrue(
@@ -132,7 +130,7 @@ public class Topic_13_Popup_01 {
 	}
 
 	@Test
-	public void TC_05_javacodegeeks() {
+	public void TC_05_Java_Code_Geeks() {
 		driver.get("https://www.javacodegeeks.com/");
 		sleepInSecond(5);
 		List<WebElement> popupGetTheBooks = driver.findElements(By.xpath("//div[@class='lepopup-popup-container']"));
@@ -170,7 +168,7 @@ public class Topic_13_Popup_01 {
 	}
 
 	@Test
-	public void TC_06_dehieu() {
+	public void TC_06_Dehieu_Page() {
 		driver.get("https://dehieu.vn/");
 		sleepInSecond(20);
 		WebElement iframe = driver.findElement(By.xpath("//div[@class=' fb_iframe_widget fb_invisible_flow']//iframe"));
